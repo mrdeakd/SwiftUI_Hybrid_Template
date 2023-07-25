@@ -1,0 +1,19 @@
+fastlane_require 'dotenv'
+default_platform(:ios)
+
+platform :ios do
+  workspace = "InterviewApp.xcworkspace"
+  scheme = "InterviewAppTests"
+
+  desc "Run InterviewApp Tests"
+  lane :test do
+    scan(
+      clean: true,
+      workspace: "#{workspace}",
+      scheme: "#{scheme}",
+      devices: ["iPhone 14 Pro"],
+      output_style: "basic",
+      include_simulator_logs: false
+    )
+  end
+end

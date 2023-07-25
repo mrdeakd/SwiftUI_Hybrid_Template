@@ -1,0 +1,41 @@
+{
+  "configurations" : [
+    {
+      "id" : "E3CAC806-12EE-4AC3-82E9-5EDBC09A5BD3",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:InterviewApp\/InterviewApp.xcodeproj",
+        "identifier" : "558208632A6EDC7F0020C3BF",
+        "name" : "InterviewAppTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:UI\/UI.xcodeproj",
+        "identifier" : "558208292A6ECCF10020C3BF",
+        "name" : "UITests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Utils\/Utils.xcodeproj",
+        "identifier" : "558208802A6F0C6A0020C3BF",
+        "name" : "UtilsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
