@@ -16,4 +16,11 @@ platform :ios do
       include_simulator_logs: false
     )
   end
+	
+  desc "Build App for Simulator"
+  lane :build_app_simulator do
+    Dir.chdir("..") do
+      sh "./fastlane/create_simulator_build.sh"
+    end
+  end
 end
