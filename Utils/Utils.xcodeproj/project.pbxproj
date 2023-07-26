@@ -11,6 +11,7 @@
 		00135FEE28F2C87200FF24C7 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00135FED28F2C87200FF24C7 /* Logging.swift */; };
 		0027058628DB857100FFCBDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0027058528DB857100FFCBDC /* Assets.xcassets */; };
 		00B2BC1F28EDA9E000DF49DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00B2BC2128EDA9E000DF49DB /* Localizable.strings */; };
+		47A2C9B3B9935FA8925B8F60 /* Pods_Utils_UtilsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475CEB0E3FC7D28F7EFD8B34 /* Pods_Utils_UtilsTests.framework */; };
 		558207DD2A6D65190020C3BF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558207DB2A6D65190020C3BF /* String+Extension.swift */; };
 		558207DE2A6D65190020C3BF /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558207DC2A6D65190020C3BF /* Bundle+Extension.swift */; };
 		558207E12A6D662B0020C3BF /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558207DF2A6D662B0020C3BF /* Assets.swift */; };
@@ -73,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				558208852A6F0C6A0020C3BF /* Utils.framework in Frameworks */,
+				47A2C9B3B9935FA8925B8F60 /* Pods_Utils_UtilsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +221,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 558208882A6F0C6A0020C3BF /* Build configuration list for PBXNativeTarget "UtilsTests" */;
 			buildPhases = (
+				78C6FA1D4F3F0BCC741A9CA7 /* [CP] Check Pods Manifest.lock */,
+				504BCAA02F84592F5AB861F8 /* [CP-User] 🚨 SwiftLint */,
 				5582087D2A6F0C6A0020C3BF /* Sources */,
 				5582087E2A6F0C6A0020C3BF /* Frameworks */,
 				5582087F2A6F0C6A0020C3BF /* Resources */,
@@ -306,6 +310,39 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Utils-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		504BCAA02F84592F5AB861F8 /* [CP-User] 🚨 SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] 🚨 SwiftLint";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd $PRODUCT_NAME\nif [[ -f \"${PODS_ROOT}/SwiftLint/swiftlint\" ]]; then\n  \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n  echo \"error: SwiftLint is not installed. Run 'pod install --repo-update' to install it.\"\n  return -1\nfi\n";
+		};
+		78C6FA1D4F3F0BCC741A9CA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Utils-UtilsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -589,6 +626,7 @@
 		};
 		558208892A6F0C6A0020C3BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B3AAC82B87E27271E37DD73 /* Pods-Utils-UtilsTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -608,6 +646,7 @@
 		};
 		5582088A2A6F0C6A0020C3BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BDB0D53C16C727988D934A9 /* Pods-Utils-UtilsTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
